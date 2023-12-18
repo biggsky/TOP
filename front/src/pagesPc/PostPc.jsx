@@ -20,17 +20,17 @@ const PostPc = () => {
       return; 
     }
     const formData = new FormData();
-
+    console.log("폼", formData);
+    
     for (let i = 0; i < uploadedFiles.length; i++) {
+      console.log("이미지", uploadedFiles[i]);
       formData.append('uploadedFiles', uploadedFiles[i]);
     }
     formData.append('title',title)
     formData.append('detail',detail)
     
+    console.log("폼2", formData);
     try {
-      console.log(title);
-      console.log(detail);
-      console.log("폼데이터", formData);
       const response = await ipUrl.post(
         "/post/write",
         formData,
