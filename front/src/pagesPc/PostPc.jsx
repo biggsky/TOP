@@ -28,6 +28,7 @@ const PostPc = () => {
     formData.append('detail',detail)
     
     try {
+      console.log("폼데이터", formData);
       const response = await ipUrl.post(
         "/post/write",
         formData,
