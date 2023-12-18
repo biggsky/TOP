@@ -6,7 +6,7 @@ var _require = require("http-proxy-middleware"),
 module.exports = function (app) {
   app.use(createProxyMiddleware("/getPic", {
     // target: "http://localhost:8080",
-    target: "http://hyunss.com",
+    target: "http://www.hyunss.com",
     changeOrigin: true
   }));
 };
