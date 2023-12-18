@@ -7,7 +7,7 @@ module.exports = function (app) {
   app.use(createProxyMiddleware("/getPic", {
     // target: "http://localhost:8080", // 로컬
     // target: "https://www.hyunss.com", //aws
-    target: "https://www.hyunss.com/api", //될거
+    target: "https://www.hyunss.com", //될거
     changeOrigin: true
   }));
 };
