@@ -71,7 +71,8 @@ const MainBottomPc = ({
   // post로 gptData를 서버로 보내는 함수
   const sendDataToGpt = async () => {
     ipUrl
-      .post("/api/openAI", { gptData })
+      // .post("/api/openAI", { gptData })
+      .post("/openAI", { gptData })
       .then((res) => {
         // gpt응답 여기서 state에 저장
         const data = JSON.parse(res.data.content);

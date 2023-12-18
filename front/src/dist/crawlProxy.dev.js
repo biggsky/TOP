@@ -5,8 +5,9 @@ var _require = require("http-proxy-middleware"),
 
 module.exports = function (app) {
   app.use(createProxyMiddleware("/getPic", {
-    // target: "http://localhost:8080",
-    target: "https://www.hyunss.com",
+    // target: "http://localhost:8080", // 로컬
+    // target: "https://www.hyunss.com", //aws
+    target: "https://www.hyunss.com/api", //될거
     changeOrigin: true
   }));
 };

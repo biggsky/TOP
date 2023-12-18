@@ -60,12 +60,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://www.hyunss.com",
-      // "http://localhost:3000",
-      // "http://localhost:8080",
-      // "http://127.0.0.1:8080",
-      // "http://52.79.43.68",
-      // "http://127.0.0.1:5500",
+      // "https://www.hyunss.com", //aws 
+      "http://localhost:3000", // 로컬
     ],
     credentials: true,
   })
