@@ -48,7 +48,9 @@ const TapMenuPc = ({ user }) => {
     }
   };
 
-  const { data, isLoading } = useQuery(["getAll"], tryGetAll);
+  const { data, isLoading } = useQuery(["getAll"], tryGetAll,{
+    staleTime:60000,
+  });
 
   useEffect(() => {
     if (data) {
