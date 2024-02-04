@@ -42,7 +42,9 @@ const Mypage = () => {
     }
   };
 
-  const { data, isLoading } = useQuery(["getUserMypage"], tryGetUserInfo);
+  const { data, isLoading } = useQuery(["getUserMypage"], tryGetUserInfo,{
+    staleTime : 60000,
+  });
 
   return (
     <>
