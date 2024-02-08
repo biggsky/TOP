@@ -94,9 +94,10 @@ const BottomNavPc = () => {
     }
   };
 
-  const { data, isLoading } = useQuery(["getUserNav"], tryGetUserInfo, {
-    staleTime: 60000,
-  });
+  const { data, isLoading } = useQuery(["getUserNav"], tryGetUserInfo);
+  // const { data, isLoading } = useQuery(["getUserNav"], tryGetUserInfo, {
+  //   staleTime: 60000,
+  // });
 
   useEffect(() => {
     if (data) {
