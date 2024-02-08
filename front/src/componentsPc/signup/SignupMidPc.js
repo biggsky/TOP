@@ -124,6 +124,7 @@ const SignupMid = ({ page }) => {
     if (signUpResult.data === "already user exist") {
       alert("이미 가입된 유저 입니다!");
     } else if (signUpResult.data === "user signUp success") {
+      alert("회원가입 완료되었습니다. 관리자의 승인을 기다리세요!")
       navigate("/login");
     }
   };
